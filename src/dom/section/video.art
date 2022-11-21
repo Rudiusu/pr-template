@@ -1,0 +1,8 @@
+<div class="video-wrap">
+  {{each value}}
+  <div class="video-item">
+    <input class="emily-tpl-input text-value" value="{{ $value }}" placeholder="请输入视频url" />
+    <video class="emily-tpl-video" src="{{ $value }}"></video>
+  </div>
+  {{/each}}
+</div>

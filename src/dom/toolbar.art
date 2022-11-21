@@ -1,0 +1,22 @@
+<ul class="emily-tpl-editor-section-tool-bar top">
+  <li class="tool-btn add">
+    <div class="icon"></div>
+  </li>
+  <li class="tool-btn copy">
+    <div class="icon"></div>
+  </li>
+  <li class="tool-btn delete">
+    <div class="icon"></div>
+  </li>
+</ul>
+<ul class="emily-tpl-editor-section-tool-bar bottom">
+  <li class="tool-btn add">
+    <div class="icon"></div>
+  </li>
+  <li class="tool-btn copy">
+    <div class="icon"></div>
+  </li>
+  <li class="tool-btn delete">
+    <div class="icon"></div>
+  </li>
+</ul>

@@ -1,0 +1,1 @@
+<input class="emily-tpl-input text-value" value="{{ value }}" placeholder="请输入标题" />

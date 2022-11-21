@@ -1,0 +1,43 @@
+<div class="emily-tpl-editor-section-item {{if type}}set{{/if}}">
+  <div class="emily-tpl-editor-section-form">
+    <div class="flex-item">
+      <label>section 名称</label>
+      <input type="text" class="emily-tpl-input section-name" placeholder="请输入" />
+    </div>
+
+    <div class="flex-item">
+      <label>section 类型</label>
+      <select class="emily-tpl-select section-type">
+        <option value="0">title</option>
+        <option value="1">text</option>
+        <option value="2">image</option>
+        <option value="3">video</option>
+        <option value="4">image with text</option>
+        <option value="5">image grid</option>
+      </select>
+    </div>
+    <div class="flex-item">
+      <button class="emily-tpl-btn normal confirm">确 定</button>
+    </div>
+  </div>
+  <div class="emily-tpl-editor-section-container" data-type="{{ type }}">
+    <div class="emily-tpl-section-wrap">
+      <div class="section-name">{{ name || "暂无名称" }}</div>
+      {{if type=="title"}}
+      {{include './section/title.art' data}}
+      {{else if type=="text"}}
+      {{include './section/text.art' data}}
+      {{else if type=="image"}}
+      {{include './section/image.art' data}}
+      {{else if type=="video"}}
+      {{include './section/video.art' data}}
+      {{else if type=="image-with-text"}}
+      {{include './section/image-with-text.art' data}}
+      {{else if type=="image-grid"}}
+      {{include './section/image-grid.art' data}}
+      {{/if}}
+    </div>
+  </div>
+
+  {{include './toolbar.art'}}
+</div>

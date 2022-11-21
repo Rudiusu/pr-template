@@ -1,0 +1,7 @@
+<div class="emily-tpl-editor">
+  <div class="emily-tpl-editor-wrap">
+    {{each sections}}
+    {{include "./section.art" $value}}
+    {{/each}}
+  </div>
+</div>

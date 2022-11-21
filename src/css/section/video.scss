@@ -1,0 +1,22 @@
+@import "../theme.scss";
+video {
+    background: #000;
+}
+.video-item {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 10px;
+    &:hover {
+        border: 1px solid $theme-blue;
+    }
+    .emily-tpl-input,
+    .emily-tpl-video {
+        flex: 1;
+    }
+}

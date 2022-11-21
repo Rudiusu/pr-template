@@ -1,0 +1,195 @@
+@import "./theme.scss";
+@import "./section/text.scss";
+@import "./section/title.scss";
+@import "./section/image.scss";
+@import "./section/video.scss";
+@import "./section/image-with-text.scss";
+@import "./section/image-grid.scss";
+* {
+  padding: 0;
+  margin: 0;
+}
+.emily-tpl-editor {
+  width: 100%;
+  overflow: hidden;
+  &-wrap {
+    background: $theme-main-color;
+    padding: 15px;
+  }
+  &-section-item {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    background: #fff;
+    margin-bottom: 20px;
+    width: 100%;
+    min-height: 120px;
+    box-shadow: 1px 1px 2px 2px rgba($color: #bbb, $alpha: 0.3);
+    border-radius: 10px;
+    &.focus {
+      border: 1px solid $theme-blue;
+      box-shadow: 1px 1px 2px 2px #cbe6ff;
+      flex: 1;
+      .emily-tpl-editor-section-tool-bar {
+        display: flex;
+      }
+    }
+    &.set {
+      .emily-tpl-editor-section-form {
+        display: none;
+      }
+      .emily-tpl-editor-section-container {
+        display: flex;
+        .emily-tpl-section-wrap {
+          flex: 1;
+          flex-wrap: wrap;
+          position: relative;
+          padding: 20px 20px 20px 180px;
+          overflow: hidden;
+          .section-name {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 100%;
+            display: flex;
+            background: $theme-blue;
+            border-radius: 10px 0 0 10px;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+          }
+        }
+      }
+
+      .tool-btn.copy {
+        display: flex !important;
+      }
+    }
+    .emily-tpl-editor-section-form {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .flex-item {
+        label {
+          font-size: 14px;
+          color: #666;
+        }
+      }
+    }
+    .emily-tpl-editor-section-container {
+      display: none;
+      flex: 1;
+    }
+    .emily-tpl-editor-section-tool-bar {
+      display: none;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      border-radius: 24px;
+      background-color: $theme-blue;
+      overflow: hidden;
+      z-index: 999;
+      &.top {
+        top: -12px;
+      }
+      &.bottom {
+        bottom: -12px;
+      }
+      li.tool-btn {
+        flex: 1;
+        width: 30px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        cursor: pointer;
+        &:hover {
+          background: $theme-blue-light;
+        }
+        .icon {
+          width: 18px;
+          height: 18px;
+        }
+        &.add {
+          .icon {
+            background: url("../icons/add.svg");
+            background-size: 100% 100%;
+          }
+        }
+        &.copy {
+          display: none;
+          .icon {
+            transform: scale(0.8);
+            background: url("../icons/copy.svg");
+            background-size: 100% 100%;
+          }
+        }
+        &.delete {
+          .icon {
+            background: url("../icons/delete.svg");
+            background-size: 100% 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.emily-tpl-input {
+  margin-right: 40px;
+  padding: 5px 11px;
+  width: 200px;
+  height: 30px;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 4px;
+  transition: all 0.3s;
+  &:hover {
+    border: 1px solid $theme-blue;
+  }
+  &:focus {
+    border: 1px solid $theme-blue;
+    box-shadow: 0 0 2px 2px #cbe6ff;
+  }
+  &::-webkit-input-placeholder {
+    color: #ccc;
+  }
+  &.textarea {
+    height: 50px;
+    min-height: 32px;
+  }
+}
+.emily-tpl-select {
+  @extend .emily-tpl-input;
+  height: 30px;
+  cursor: pointer;
+}
+.emily-tpl-btn {
+  min-width: 80px;
+  height: 30px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+
+  &.normal {
+    background: $theme-blue;
+    &:hover {
+      background: $theme-blue-light;
+    }
+  }
+}
+
+.w-50 {
+  width: 50px;
+}
+.w-100 {
+  width: 100px;
+}
+.w-200 {
+  width: 200px;
+}

@@ -1,0 +1,1 @@
+<input type="text" class="emily-tpl-input text-value" placeholder="请输入图片链接" /> <img src="{{ src }}" alt="" />

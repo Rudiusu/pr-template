@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>editor test</title>
+    <!-- <script src="http://localhost:35729/livereload.js"></script> -->
+    <script src="/editor.min.js" type="module"></script>
+  </head>
+  <style>
+    .box {
+      margin: 0 auto;
+      width: 800px;
+      min-height: 600px;
+      border: 1px solid #999;
+    }
+  </style>
+  <body>
+    <div class="box"></div>
+  </body>
+  <script>
+    let editor;
+    window.onload = () => {
+      const box = document.querySelector(".box");
+      editor = new Editor({
+        container: box,
+        sections: [
+          {
+            type: "title",
+            name: "产品名称",
+            data: {
+              value: "阿帕茶",
+            },
+          },
+          {
+            type: "text",
+            name: "产品简介",
+            data: {
+              value: "鲜榨萃取，好喝不上火",
+            },
+          },
+          {
+            type: "video",
+            name: "产品视频",
+            data: {
+              value: ["/acdd/dd", "ddd/fff"],
+            },
+          },
+        ],
+      });
+    };
+  </script>
+</html>

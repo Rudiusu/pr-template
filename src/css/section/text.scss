@@ -1,0 +1,12 @@
+.emily-tpl-section-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .text-value {
+        flex: 3;
+    }
+    .textarea {
+        transition: none;
+    }
+}

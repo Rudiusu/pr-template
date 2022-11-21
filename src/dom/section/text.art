@@ -1,0 +1,1 @@
+<textarea class="emily-tpl-input textarea text-value" placeholder="请输入">{{ value }}</textarea>
