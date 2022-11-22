@@ -37,4 +37,5 @@ export default class DOM {
   destroy() {
     this.container.innerHTML = null;
   }
+
 }

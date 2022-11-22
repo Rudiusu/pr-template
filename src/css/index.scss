@@ -58,6 +58,20 @@
             justify-content: center;
             align-items: center;
             color: #fff;
+            .title-input {
+              color:#fff;
+              box-sizing: border-box;
+              margin: 0;
+              display: inline-block;
+              background: $theme-blue;
+              width: 100%;
+              min-width: 0;
+              padding: 4px 11px;
+              line-height: 1.5715;
+              border: none;
+              border-radius: 2px;it
+              transition: all .3s;
+            }
           }
         }
       }
