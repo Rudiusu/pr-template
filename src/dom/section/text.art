@@ -1,1 +1,8 @@
-<textarea class="emily-tpl-input textarea text-value" placeholder="请输入">{{ value }}</textarea>
+<div class="list-wrap">
+  {{each value}}
+  <div class="text-item list-edit">
+    {{include "../list-editor.art"}}
+    <textarea class="emily-tpl-input textarea text-value" placeholder="请输入">{{ $value }}</textarea>
+  </div>
+  {{/each}}
+</div>
