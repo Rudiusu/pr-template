@@ -22,7 +22,10 @@
   </div>
   <div class="emily-tpl-editor-section-container" data-type="{{ type }}">
     <div class="emily-tpl-section-wrap">
-      <div class="section-name">{{ name || "暂无名称" }}</div>
+      <div class="section-side-bar">
+        <span class="section-name">{{ name || "暂无名称" }}</span>
+        <span class="section-type">{{ type }}</span>
+      </div>
       {{if type=="title"}}
       {{include './section/title.art' data}}
       {{else if type=="text"}}

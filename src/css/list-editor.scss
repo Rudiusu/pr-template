@@ -1,0 +1,73 @@
+.list-edit {
+    position: relative;
+    margin: 20px 0;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 15px;
+    &:hover {
+        border: 1px solid $theme-blue;
+    }
+    &:hover {
+        .section-list-editor {
+            opacity: 1;
+            width: 90px;
+        }
+    }
+    .section-list-editor {
+        opacity: 0;
+        width: 0;
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        transition: all 0.3s;
+        border-radius: 24px;
+        background-color: $theme-blue;
+        overflow: hidden;
+
+        z-index: 999;
+        &.top {
+            top: -12px;
+        }
+        &.bottom {
+            bottom: -12px;
+        }
+
+        li.list-editor-btn {
+            flex: 1;
+            width: 30px;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            cursor: pointer;
+            &:hover {
+                background: $theme-blue-light;
+            }
+            .icon {
+                width: 18px;
+                height: 18px;
+            }
+            &.add {
+                .icon {
+                    background: url("../icons/add.svg");
+                    background-size: 100% 100%;
+                }
+            }
+            &.copy {
+                .icon {
+                    transform: scale(0.8);
+                    background: url("../icons/copy.svg");
+                    background-size: 100% 100%;
+                }
+            }
+            &.delete {
+                .icon {
+                    background: url("../icons/delete.svg");
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
+}

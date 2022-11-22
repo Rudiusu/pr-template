@@ -1,1 +1,9 @@
-<input type="text" class="emily-tpl-input text-value" placeholder="请输入图片链接" /> <img src="{{ src }}" alt="" />
+<div class="list-wrap">
+  {{each value}}
+  <div class="image-item list-edit">
+    {{include "../list-editor.art"}}
+    <input type="text" class="emily-tpl-input text-value" placeholder="请输入图片链接" value="{{ $value }}" />
+    <img src="{{ $value }}" />
+  </div>
+  {{/each}}
+</div>

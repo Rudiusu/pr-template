@@ -1,4 +1,6 @@
 @import "./theme.scss";
+@import "./list-editor.scss";
+@import "./toolbar.scss";
 @import "./section/text.scss";
 @import "./section/title.scss";
 @import "./section/image.scss";
@@ -46,18 +48,29 @@
           position: relative;
           padding: 20px 20px 20px 180px;
           overflow: hidden;
-          .section-name {
+          .section-side-bar {
             position: absolute;
             top: 0;
             left: 0;
             width: 150px;
             height: 100%;
             display: flex;
+            flex-direction: column;
             background: $theme-blue;
             border-radius: 10px 0 0 10px;
             justify-content: center;
             align-items: center;
             color: #fff;
+            .section-type {
+              background: rgba(255, 255, 255, 0.2);
+              border-radius: 5px;
+              padding: 0 5px;
+              margin-top: 10px;
+              font-size: 14px;
+            }
+          }
+          .list-wrap {
+            flex: 1;
           }
         }
       }
@@ -69,7 +82,7 @@
     .emily-tpl-editor-section-form {
       flex: 1;
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
       .flex-item {
         label {
@@ -82,63 +95,9 @@
       display: none;
       flex: 1;
     }
-    .emily-tpl-editor-section-tool-bar {
-      display: none;
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, 0);
-      border-radius: 24px;
-      background-color: $theme-blue;
-      overflow: hidden;
-      z-index: 999;
-      &.top {
-        top: -12px;
-      }
-      &.bottom {
-        bottom: -12px;
-      }
-      li.tool-btn {
-        flex: 1;
-        width: 30px;
-        height: 24px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        cursor: pointer;
-        &:hover {
-          background: $theme-blue-light;
-        }
-        .icon {
-          width: 18px;
-          height: 18px;
-        }
-        &.add {
-          .icon {
-            background: url("../icons/add.svg");
-            background-size: 100% 100%;
-          }
-        }
-        &.copy {
-          display: none;
-          .icon {
-            transform: scale(0.8);
-            background: url("../icons/copy.svg");
-            background-size: 100% 100%;
-          }
-        }
-        &.delete {
-          .icon {
-            background: url("../icons/delete.svg");
-            background-size: 100% 100%;
-          }
-        }
-      }
-    }
   }
 }
 .emily-tpl-input {
-  margin-right: 40px;
   padding: 5px 11px;
   width: 200px;
   height: 30px;
@@ -192,4 +151,7 @@
 }
 .w-200 {
   width: 200px;
+}
+li {
+  list-style: none;
 }

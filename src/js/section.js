@@ -10,6 +10,8 @@ import Image from "./section/image";
 import Video from "./section/video";
 import ImageWithText from "./section/image-with-text";
 import ImageGrid from "./section/image-grid";
+
+import utils from "./utils";
 export default class Section {
   constructor(editor) {
     this.editor = editor;
@@ -71,6 +73,7 @@ export default class Section {
       console.dir(sec_type);
       section.classList.add("set");
       sec_wrap.querySelector(".section-name").innerText = sec_name || "暂无名称";
+      sec_wrap.querySelector(".section-type").innerText = utils.num2type(sec_type);
       switch (sec_type) {
         case "0": //title
           const title = this.factory("title");
@@ -154,10 +157,14 @@ export default class Section {
         section = titleTPL();
         break;
       case "text":
-        section = textTPL();
+        section = textTPL({
+          value: [""],
+        });
         break;
       case "image":
-        section = imageTPL();
+        section = imageTPL({
+          value: [""],
+        });
         break;
       case "video":
         section = videoTPL({

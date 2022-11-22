@@ -1,0 +1,22 @@
+<ul class="section-list-editor top">
+  <li class="list-editor-btn add">
+    <div class="icon"></div>
+  </li>
+  <li class="list-editor-btn copy">
+    <div class="icon"></div>
+  </li>
+  <li class="list-editor-btn delete">
+    <div class="icon"></div>
+  </li>
+</ul>
+<ul class="section-list-editor bottom">
+  <li class="list-editor-btn add">
+    <div class="icon"></div>
+  </li>
+  <li class="list-editor-btn copy">
+    <div class="icon"></div>
+  </li>
+  <li class="list-editor-btn delete">
+    <div class="icon"></div>
+  </li>
+</ul>

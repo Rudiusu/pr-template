@@ -1,0 +1,15 @@
+.image-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .emily-tpl-input {
+        flex: 1;
+        margin-right: 40px;
+    }
+    > img {
+        width: 150px;
+        min-height: 60px;
+        background: #bbb;
+    }
+}
